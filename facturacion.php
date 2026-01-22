@@ -1,380 +1,220 @@
-<?php include 'header.php'; ?>
+<?php 
+$page_title = "Facturación Electrónica";
+include 'header.php'; 
+?>
 
-<!-- Hero Section -->
-<section class="relative h-96 flex items-center justify-center overflow-hidden bg-black">
-  <!-- Imagen de fondo -->
+<section class="relative h-96 flex items-center justify-center overflow-hidden bg-navy">
   <div class="absolute inset-0 z-0">
     <img 
-      src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" 
-      alt="Servicio de Facturación" 
-      class="w-full h-full object-cover opacity-50"
+      src="img/hero-facturacion.jpg" 
+      alt="Facturación Electrónica" 
+      class="w-full h-full object-cover opacity-40 mix-blend-overlay"
+      onerror="this.src='https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80';"
     >
   </div>
   
-  <!-- Overlay oscuro -->
-  <div class="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
-  
-  <!-- Contenido principal -->
-  <div class="relative z-20 text-center px-6 max-w-4xl mx-auto">
-    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-fade-in-up">
-      Servicio de <span class="text-accent">Facturación</span>
+  <div class="absolute inset-0 bg-gradient-to-b from-navy/90 to-navy/60 z-10"></div>
+
+  <div class="container mx-auto px-6 text-center relative z-10">
+    <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-in-up">
+      Facturación <span class="text-accent">Electrónica</span>
     </h1>
-    <p class="text-xl text-light-gray mb-8 max-w-2xl mx-auto leading-relaxed">
-      Soluciones integrales de facturación para todo tipo de empresas. Cumplimiento normativo garantizado
+    <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-10 animate-fade-in-up delay-200">
+      Emite tus comprobantes fiscales de manera rápida, segura y cumpliendo con todas las normas del SAT.
     </p>
-    <div class="animate-fade-in-up delay-200">
-      <a href="#contacto" class="bg-accent text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center shadow-lg">
-        <i class="fas fa-file-invoice-dollar mr-3"></i>
-        Solicitar Asesoría
+    <div class="animate-fade-in-up delay-400">
+      <a href="#contacto" class="bg-accent text-white px-8 py-3 rounded-lg font-semibold text-lg shadow-lg hover:bg-blue-600 transition-all duration-300 transform hover:scale-105">
+        Solicitar Demo
       </a>
     </div>
   </div>
 </section>
 
-<!-- Sección de Estadísticas -->
-<section class="py-16 bg-dark-gray">
-  <div class="max-w-6xl mx-auto px-6">
+<section class="py-16 bg-navy-light border-y border-white/5">
+  <div class="container mx-auto px-6">
     <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ventajas de Nuestro Servicio</h2>
-      <p class="text-light-gray max-w-2xl mx-auto">
-        Optimizamos tus procesos de facturación para mayor eficiencia y cumplimiento normativo
-      </p>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Beneficios Clave</h2>
     </div>
 
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-      <!-- Estadística 1 -->
-      <div class="bg-gray rounded-xl p-6 text-center text-white hover:transform hover:scale-105 transition-all duration-300">
-        <div class="text-4xl md:text-5xl font-bold text-accent mb-2 counter" data-target="100">0</div>
-        <div class="text-light-gray">Cumplimiento normativo SAT</div>
+      
+      <div class="bg-navy rounded-xl p-6 text-center border border-white/5 hover:border-accent/50 transition-all duration-300 group">
+        <div class="text-accent text-4xl mb-4 group-hover:scale-110 transition-transform">
+          <i class="fas fa-check-double"></i>
+        </div>
+        <div class="counter text-3xl font-bold text-white mb-2" 
+             data-target="100" data-symbol="%">0</div>
+        <p class="text-gray-400 text-sm">Cumplimiento normativo SAT</p>
       </div>
 
-      <!-- Estadística 2 -->
-      <div class="bg-gray rounded-xl p-6 text-center text-white hover:transform hover:scale-105 transition-all duration-300">
-        <div class="text-4xl md:text-5xl font-bold text-accent mb-2 counter" data-target="70">0</div>
-        <div class="text-light-gray">Ahorro de tiempo en procesos</div>
+      <div class="bg-navy rounded-xl p-6 text-center border border-white/5 hover:border-accent/50 transition-all duration-300 group">
+        <div class="text-accent text-4xl mb-4 group-hover:scale-110 transition-transform">
+          <i class="fas fa-hourglass-half"></i>
+        </div>
+        <div class="counter text-3xl font-bold text-white mb-2" 
+             data-target="70" data-symbol="%">0</div>
+        <p class="text-gray-400 text-sm">Ahorro de tiempo en procesos</p>
       </div>
 
-      <!-- Estadística 3 -->
-      <div class="bg-gray rounded-xl p-6 text-center text-white hover:transform hover:scale-105 transition-all duration-300">
-        <div class="text-4xl md:text-5xl font-bold text-accent mb-2">24/7</div>
-        <div class="text-light-gray">Disponibilidad del servicio</div>
+      <div class="bg-navy rounded-xl p-6 text-center border border-white/5 hover:border-accent/50 transition-all duration-300 group">
+        <div class="text-accent text-4xl mb-4 group-hover:scale-110 transition-transform">
+          <i class="fas fa-server"></i>
+        </div>
+        <div class="counter text-3xl font-bold text-white mb-2" 
+             data-target="24" data-symbol="/7">0</div>
+        <p class="text-gray-400 text-sm">Disponibilidad del servicio</p>
       </div>
 
-      <!-- Estadística 4 -->
-      <div class="bg-gray rounded-xl p-6 text-center text-white hover:transform hover:scale-105 transition-all duration-300">
-        <div class="text-4xl md:text-5xl font-bold text-accent mb-2 counter" data-target="100">0</div>
-        <div class="text-light-gray">Seguridad de datos</div>
+      <div class="bg-navy rounded-xl p-6 text-center border border-white/5 hover:border-accent/50 transition-all duration-300 group">
+        <div class="text-accent text-4xl mb-4 group-hover:scale-110 transition-transform">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <div class="counter text-3xl font-bold text-white mb-2" 
+             data-target="100" data-symbol="%">0</div>
+        <p class="text-gray-400 text-sm">Seguridad de datos</p>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- Sección de Tipos de Facturación -->
-<section class="py-16 bg-black">
-  <div class="max-w-6xl mx-auto px-6">
+<section class="bg-navy py-16">
+  <div class="container mx-auto px-6">
     <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
-        Realizamos diferentes tipos de <span class="text-accent">Facturación</span>
-      </h2>
-      <p class="text-light-gray max-w-2xl mx-auto">
-        Adaptamos nuestros servicios a las necesidades específicas de tu empresa
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <!-- Factura Proforma -->
-      <div class="service-card bg-dark-gray p-8 rounded-xl border border-gray hover:border-accent transition-all duration-500 group">
-        <div class="text-accent text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
-          <i class="fas fa-file-medical"></i>
-        </div>
-        <h3 class="text-2xl font-bold text-white mb-4">Factura Proforma</h3>
-        <p class="text-light-gray mb-4">
-          Documento que se emite para dar una estimación de los productos o servicios que se van a vender
-        </p>
-        <button onclick="toggleDetails('proforma')" class="bg-accent text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 w-full">
-          Ver Detalles
-        </button>
-        <div id="proforma" class="details mt-4 text-light-gray">
-          <ul class="list-disc pl-5 space-y-2 text-sm">
-            <li>No tiene valor fiscal</li>
-            <li>No es un documento de pago</li>
-            <li>Útil para trámites aduaneros</li>
-            <li>Previa a la factura definitiva</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Factura Comercial -->
-      <div class="service-card bg-dark-gray p-8 rounded-xl border border-gray hover:border-accent transition-all duration-500 group">
-        <div class="text-accent text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
-          <i class="fas fa-file-contract"></i>
-        </div>
-        <h3 class="text-2xl font-bold text-white mb-4">Factura Comercial</h3>
-        <p class="text-light-gray mb-4">
-          Documento legalmente válido, utilizado para registrar una transacción de bienes o servicios
-        </p>
-        <button onclick="toggleDetails('comercial')" class="bg-accent text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 w-full">
-          Ver Detalles
-        </button>
-        <div id="comercial" class="details mt-4 text-light-gray">
-          <ul class="list-disc pl-5 space-y-2 text-sm">
-            <li>Documento legal y fiscal</li>
-            <li>Incluye impuestos y descuentos</li>
-            <li>Obligatorio para deducciones</li>
-            <li>Comprobante de operación</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Factura de Crédito -->
-      <div class="service-card bg-dark-gray p-8 rounded-xl border border-gray hover:border-accent transition-all duration-500 group">
-        <div class="text-accent text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
-          <i class="fas fa-credit-card"></i>
-        </div>
-        <h3 class="text-2xl font-bold text-white mb-4">Factura de Crédito</h3>
-        <p class="text-light-gray mb-4">
-          Se utiliza cuando el pago no se realiza al momento de la venta, con plazo para el pago
-        </p>
-        <button onclick="toggleDetails('credito')" class="bg-accent text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 w-full">
-          Ver Detalles
-        </button>
-        <div id="credito" class="details mt-4 text-light-gray">
-          <ul class="list-disc pl-5 space-y-2 text-sm">
-            <li>Plazo para el pago</li>
-            <li>Puede incluir intereses</li>
-            <li>Registro de cuenta por cobrar</li>
-            <li>Documento legalmente válido</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Factura de Contado -->
-      <div class="service-card bg-dark-gray p-8 rounded-xl border border-gray hover:border-accent transition-all duration-500 group">
-        <div class="text-accent text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
-          <i class="fas fa-money-bill-wave"></i>
-        </div>
-        <h3 class="text-2xl font-bold text-white mb-4">Factura de Contado</h3>
-        <p class="text-light-gray mb-4">
-          Cuando el pago se realiza inmediatamente después de la compra, común en transacciones al por menor
-        </p>
-        <button onclick="toggleDetails('contado')" class="bg-accent text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 w-full">
-          Ver Detalles
-        </button>
-        <div id="contado" class="details mt-4 text-light-gray">
-          <ul class="list-disc pl-5 space-y-2 text-sm">
-            <li>Pago inmediato</li>
-            <li>Común en transacciones al por menor</li>
-            <li>Sin extensión de crédito</li>
-            <li>Comprobante de pago completo</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Sección de Proceso -->
-<section class="py-16 bg-dark-gray">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Nuestro Proceso de Facturación</h2>
-      <p class="text-light-gray max-w-2xl mx-auto">
-        Implementamos un flujo de trabajo eficiente para garantizar facturación precisa y oportuna
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-      <!-- Paso 1 -->
-      <div class="bg-gray rounded-xl p-6 text-center text-white hover:transform hover:scale-105 transition-all duration-300">
-        <div class="w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold text-lg">
-          1
-        </div>
-        <h3 class="text-lg font-semibold mb-3 text-white">Recepción</h3>
-        <p class="text-light-gray text-sm">
-          Recibimos tus documentos y datos necesarios para la facturación
-        </p>
-      </div>
-
-      <!-- Paso 2 -->
-      <div class="bg-gray rounded-xl p-6 text-center text-white hover:transform hover:scale-105 transition-all duration-300">
-        <div class="w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold text-lg">
-          2
-        </div>
-        <h3 class="text-lg font-semibold mb-3 text-white">Validación</h3>
-        <p class="text-light-gray text-sm">
-          Verificamos que toda la información cumpla con los requisitos fiscales
-        </p>
-      </div>
-
-      <!-- Paso 3 -->
-      <div class="bg-gray rounded-xl p-6 text-center text-white hover:transform hover:scale-105 transition-all duration-300">
-        <div class="w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold text-lg">
-          3
-        </div>
-        <h3 class="text-lg font-semibold mb-3 text-white">Emisión</h3>
-        <p class="text-light-gray text-sm">
-          Generamos las facturas con todos los datos requeridos por el SAT
-        </p>
-      </div>
-
-      <!-- Paso 4 -->
-      <div class="bg-gray rounded-xl p-6 text-center text-white hover:transform hover:scale-105 transition-all duration-300">
-        <div class="w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold text-lg">
-          4
-        </div>
-        <h3 class="text-lg font-semibold mb-3 text-white">Entrega</h3>
-        <p class="text-light-gray text-sm">
-          Enviamos las facturas a tus clientes y te proporcionamos copias
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Sección de Beneficios -->
-<section class="py-16 bg-black">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Beneficios de Externalizar tu Facturación</h2>
-      <p class="text-light-gray max-w-2xl mx-auto">
-        Enfócate en tu negocio principal mientras nosotros nos encargamos de tu facturación
-      </p>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Todo lo que necesitas para facturar</h2>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <!-- Beneficio 1 -->
-      <div class="service-card bg-dark-gray p-8 rounded-xl border border-gray hover:border-accent transition-all duration-500 group">
-        <div class="text-accent text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
-          <i class="fas fa-lock"></i>
+      <div class="bg-navy-light rounded-xl border border-white/5 p-8 text-center hover:-translate-y-2 transition-transform duration-300 group">
+        <div class="w-16 h-16 bg-navy rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent transition-colors">
+          <i class="fas fa-file-invoice-dollar text-accent text-2xl group-hover:text-white transition-colors"></i>
         </div>
-        <h3 class="text-2xl font-bold text-white mb-4">Seguridad</h3>
-        <p class="text-light-gray">
-          Tus datos fiscales están protegidos con los más altos estándares de seguridad
+        <h3 class="text-xl font-semibold text-white mb-3">Timbrado Masivo</h3>
+        <p class="text-gray-400 mb-4">
+          Carga tus facturas desde Excel y tímbralas en segundos.
         </p>
       </div>
 
-      <!-- Beneficio 2 -->
-      <div class="service-card bg-dark-gray p-8 rounded-xl border border-gray hover:border-accent transition-all duration-500 group">
-        <div class="text-accent text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
-          <i class="fas fa-bolt"></i>
+      <div class="bg-navy-light rounded-xl border border-white/5 p-8 text-center hover:-translate-y-2 transition-transform duration-300 group">
+        <div class="w-16 h-16 bg-navy rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent transition-colors">
+          <i class="fas fa-puzzle-piece text-accent text-2xl group-hover:text-white transition-colors"></i>
         </div>
-        <h3 class="text-2xl font-bold text-white mb-4">Rapidez</h3>
-        <p class="text-light-gray">
-          Procesamos tus facturas en tiempo récord, sin retrasos ni complicaciones
+        <h3 class="text-xl font-semibold text-white mb-3">Complementos de Pago</h3>
+        <p class="text-gray-400 mb-4">
+          Genera recepciones de pago y Carta Porte fácilmente.
         </p>
       </div>
 
-      <!-- Beneficio 3 -->
-      <div class="service-card bg-dark-gray p-8 rounded-xl border border-gray hover:border-accent transition-all duration-500 group">
-        <div class="text-accent text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
-          <i class="fas fa-check-double"></i>
+      <div class="bg-navy-light rounded-xl border border-white/5 p-8 text-center hover:-translate-y-2 transition-transform duration-300 group">
+        <div class="w-16 h-16 bg-navy rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-accent transition-colors">
+          <i class="fas fa-chart-pie text-accent text-2xl group-hover:text-white transition-colors"></i>
         </div>
-        <h3 class="text-2xl font-bold text-white mb-4">Exactitud</h3>
-        <p class="text-light-gray">
-          Garantizamos que todas tus facturas cumplan con los requisitos del SAT
+        <h3 class="text-xl font-semibold text-white mb-3">Reportes Inteligentes</h3>
+        <p class="text-gray-400 mb-4">
+          Analiza tus ingresos y egresos con gráficos detallados.
         </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Sección de Clientes -->
-<section class="py-16 bg-dark-gray">
-  <div class="max-w-6xl mx-auto px-6">
+<section class="py-16 bg-navy-light border-y border-white/5">
+  <div class="container mx-auto px-6">
     <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Empresas que Confían en Nosotros</h2>
-      <p class="text-light-gray max-w-2xl mx-auto">
-        Colaboramos con empresas líderes en sus respectivos sectores
-      </p>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Lo que dicen nuestros clientes</h2>
     </div>
 
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-      <div class="bg-gray p-6 rounded-xl flex items-center justify-center h-24 grayscale hover:grayscale-0 transition-all duration-300">
-        <span class="text-white font-bold text-xl">VOLANA</span>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-navy p-6 rounded-xl border border-white/5 relative hover:border-accent transition-all duration-300">
+        <i class="fas fa-quote-left text-accent/20 text-4xl absolute top-4 left-4"></i>
+        <div class="relative z-10 pt-4">
+            <p class="text-gray-300 mb-6 italic">"La plataforma es increíblemente fácil de usar. Ahora terminamos la facturación del mes en la mitad del tiempo."</p>
+            <div class="flex items-center">
+              <div class="w-12 h-12 rounded-full bg-navy-light border-2 border-accent flex items-center justify-center mr-4">
+                <i class="fas fa-user text-gray-400 text-xl"></i>
+              </div>
+              <div>
+                  <h4 class="font-semibold text-white">Contador General</h4>
+                  <p class="text-accent text-sm">Despacho Contable</p>
+              </div>
+            </div>
+        </div>
       </div>
-      <div class="bg-gray p-6 rounded-xl flex items-center justify-center h-24 grayscale hover:grayscale-0 transition-all duration-300">
-        <span class="text-white font-bold text-xl">EXITUS</span>
+
+      <div class="bg-navy p-6 rounded-xl border border-white/5 relative hover:border-accent transition-all duration-300">
+        <i class="fas fa-quote-left text-accent/20 text-4xl absolute top-4 left-4"></i>
+        <div class="relative z-10 pt-4">
+            <p class="text-gray-300 mb-6 italic">"Excelente soporte técnico y actualizaciones constantes conforme a las leyes del SAT. Muy recomendados."</p>
+            <div class="flex items-center">
+              <div class="w-12 h-12 rounded-full bg-navy-light border-2 border-accent flex items-center justify-center mr-4">
+                <i class="fas fa-user text-gray-400 text-xl"></i>
+              </div>
+              <div>
+                  <h4 class="font-semibold text-white">Administrador</h4>
+                  <p class="text-accent text-sm">Pyme de Servicios</p>
+              </div>
+            </div>
+        </div>
       </div>
-      <div class="bg-gray p-6 rounded-xl flex items-center justify-center h-24 grayscale hover:grayscale-0 transition-all duration-300">
-        <span class="text-white font-bold text-xl">FORTALEZA</span>
-      </div>
-      <div class="bg-gray p-6 rounded-xl flex items-center justify-center h-24 grayscale hover:grayscale-0 transition-all duration-300">
-        <span class="text-white font-bold text-xl">CAME</span>
+
+      <div class="bg-navy p-6 rounded-xl border border-white/5 relative hover:border-accent transition-all duration-300">
+        <i class="fas fa-quote-left text-accent/20 text-4xl absolute top-4 left-4"></i>
+        <div class="relative z-10 pt-4">
+            <p class="text-gray-300 mb-6 italic">"La integración con nuestro sistema ERP fue transparente. La seguridad de los datos nos da mucha tranquilidad."</p>
+            <div class="flex items-center">
+              <div class="w-12 h-12 rounded-full bg-navy-light border-2 border-accent flex items-center justify-center mr-4">
+                <i class="fas fa-user text-gray-400 text-xl"></i>
+              </div>
+              <div>
+                  <h4 class="font-semibold text-white">Gerente de Finanzas</h4>
+                  <p class="text-accent text-sm">Empresa Logística</p>
+              </div>
+            </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Sección de Contacto -->
-<section id="contacto" class="py-16 bg-black">
-  <div class="max-w-6xl mx-auto px-6">
+<section id="contacto" class="py-20 bg-accent">
+  <div class="container mx-auto px-6">
     <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">¿Necesita Asesoría en Facturación?</h2>
-      <p class="text-light-gray max-w-2xl mx-auto">
-        Contáctenos para una evaluación sin costo de sus necesidades de facturación
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Empieza a Facturar Hoy</h2>
+      <p class="text-blue-100 max-w-2xl mx-auto text-lg">
+        Elige el plan de folios que mejor se adapte a tu volumen de operación.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <!-- Información de Contacto -->
-      <div class="bg-dark-gray rounded-xl p-8 text-white">
-        <h3 class="text-2xl font-semibold mb-6 text-accent">Información de Contacto</h3>
-        <div class="space-y-4">
-          <div class="flex items-start">
-            <i class="fas fa-envelope text-accent mr-4 mt-1 text-lg"></i>
-            <div>
-              <p class="font-semibold">Email</p>
-              <p class="text-light-gray">admin@bdosoluciones.com</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <div class="bg-navy rounded-xl p-8 shadow-2xl border border-white/10 transform hover:-translate-y-1 transition-transform duration-300">
+        <h3 class="text-xl font-bold mb-6 text-white border-b border-white/10 pb-4">Contacto de Ventas</h3>
+        <div class="space-y-6">
+          <div class="flex items-center text-gray-200 group">
+            <div class="w-12 h-12 rounded-lg bg-navy-light flex items-center justify-center mr-4 text-accent group-hover:text-white group-hover:bg-accent transition-colors">
+               <i class="fas fa-envelope text-xl"></i>
             </div>
+            <span class="text-lg">ventas@bdosoluciones.com</span>
           </div>
-          <div class="flex items-start">
-            <i class="fas fa-phone-alt text-accent mr-4 mt-1 text-lg"></i>
-            <div>
-              <p class="font-semibold">Teléfono</p>
-              <p class="text-light-gray">+52 5637713882</p>
+          <div class="flex items-center text-gray-200 group">
+            <div class="w-12 h-12 rounded-lg bg-navy-light flex items-center justify-center mr-4 text-accent group-hover:text-white group-hover:bg-accent transition-colors">
+               <i class="fas fa-phone-alt text-xl"></i>
             </div>
-          </div>
-          <div class="flex items-start">
-            <i class="fas fa-clock text-accent mr-4 mt-1 text-lg"></i>
-            <div>
-              <p class="font-semibold">Horario</p>
-              <p class="text-light-gray">Lunes a Viernes: 9:00 - 18:00</p>
-            </div>
-          </div>
-          <div class="flex items-start">
-            <i class="fas fa-map-marker-alt text-accent mr-4 mt-1 text-lg"></i>
-            <div>
-              <p class="font-semibold">Ubicación</p>
-              <p class="text-light-gray">Ixtapaluca, Estado de México</p>
-            </div>
+            <span class="text-lg">+52 5637713882</span>
           </div>
         </div>
       </div>
 
-      <!-- Formulario de Contacto -->
-      <div class="bg-dark-gray rounded-xl p-8 text-white">
-        <h3 class="text-2xl font-semibold mb-6 text-accent">Solicitar Asesoría</h3>
-        <p class="text-light-gray mb-6">
-          Completa el formulario y nos pondremos en contacto contigo a la brevedad
-        </p>
-        
+      <div class="bg-navy rounded-xl p-8 shadow-2xl border border-white/10 transform hover:-translate-y-1 transition-transform duration-300">
+        <h3 class="text-xl font-bold mb-6 text-white border-b border-white/10 pb-4">Pedir Cotización</h3>
         <div class="space-y-4">
-          <a href="https://wa.me/525637713882?text=Hola,%20estoy%20interesado%20en%20el%20servicio%20de%20facturación" 
-             class="block w-full bg-green-600 text-white py-4 rounded-lg font-semibold text-center hover:bg-green-700 transition-all duration-300 transform hover:scale-105">
-            <i class="fab fa-whatsapp mr-3 text-xl"></i>
-            Contactar por WhatsApp
+          <a href="https://wa.me/525637713882?text=Hola,%20necesito%20info%20de%20facturación" 
+             class="block w-full bg-white text-navy hover:bg-gray-100 py-4 rounded-lg font-bold text-center transition-all shadow-md flex items-center justify-center">
+            <i class="fab fa-whatsapp mr-2 text-2xl text-green-600"></i> WhatsApp
           </a>
           
           <a href="tel:+525637713882" 
-             class="block w-full bg-accent text-white py-4 rounded-lg font-semibold text-center hover:bg-blue-700 transition-all duration-300 transform hover:scale-105">
-            <i class="fas fa-phone mr-3"></i>
-            Llamar Ahora
-          </a>
-          
-          <a href="mailto:admin@bdosoluciones.com?subject=Solicitud de Información - Servicio de Facturación" 
-             class="block w-full bg-gray text-white py-4 rounded-lg font-semibold text-center hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 border border-gray">
-            <i class="fas fa-envelope mr-3"></i>
-            Enviar Email
+             class="block w-full bg-navy-light hover:bg-accent text-white py-4 rounded-lg font-bold text-center transition-all shadow-md border border-white/10 flex items-center justify-center">
+            <i class="fas fa-phone mr-2"></i> Llamar Ahora
           </a>
         </div>
       </div>
@@ -382,174 +222,62 @@
   </div>
 </section>
 
-<style>
-  /* Animaciones específicas para facturación */
-  .service-card {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease-out;
-  }
-
-  .service-card.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .animate-fade-in-up {
-    animation: fade-in-up 1s ease-out;
-  }
-
-  .delay-200 {
-    animation-delay: 200ms;
-  }
-
-  /* Detalles desplegables */
-  .details {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out;
-  }
-
-  .details.open {
-    max-height: 500px;
-  }
-
-  @keyframes fade-in-up {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-</style>
-
 <script>
-  // Función para animación de contadores
-  function animateCounter(element, target, duration = 2000) {
-    let current = 0;
-    const increment = target / (duration / 16);
-    const timer = setInterval(() => {
-      current += increment;
-      if (current >= target) {
-        element.textContent = target + '%';
-        clearInterval(timer);
-      } else {
-        element.textContent = Math.floor(current) + '%';
-      }
-    }, 16);
-  }
-
-  // Observer para animaciones al hacer scroll
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        
-        // Si contiene contadores, animarlos
-        const counters = entry.target.querySelectorAll('.counter');
-        counters.forEach(counter => {
-          const target = parseInt(counter.getAttribute('data-target'));
-          animateCounter(counter, target);
-        });
-      }
-    });
-  }, { threshold: 0.1 });
-
-  // Inicializar cuando el DOM esté listo
   document.addEventListener('DOMContentLoaded', () => {
-    // Observar secciones que contienen contadores
-    const statsSection = document.querySelector('.bg-dark-gray');
-    if (statsSection) {
-      observer.observe(statsSection);
-    }
-
-    // Observar tarjetas de servicio
-    document.querySelectorAll('.service-card').forEach(card => {
-      observer.observe(card);
-    });
-
-    // Smooth scroll para enlaces internos
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
+    
+    const runAnimation = (counter) => {
+      const target = parseInt(counter.getAttribute('data-target'));
+      const symbol = counter.getAttribute('data-symbol') || '';
+      const duration = 2000;
+      const frames = 60;
+      const increment = target / (duration / (1000 / frames));
+      
+      let current = 0;
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          counter.textContent = target + symbol;
+          clearInterval(timer);
+        } else {
+          counter.textContent = Math.ceil(current) + symbol;
         }
-      });
-    });
+      }, 1000 / frames);
+    };
 
-    // Observer específico para contadores
-    const counterObserver = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const counters = entry.target.querySelectorAll('.counter');
-          counters.forEach(counter => {
-            const target = parseInt(counter.getAttribute('data-target'));
-            animateCounter(counter, target);
-          });
-          counterObserver.unobserve(entry.target);
+          const counter = entry.target;
+          if (counter.innerText === '0' || counter.innerText === '') {
+            runAnimation(counter);
+            observer.unobserve(counter);
+          }
         }
       });
     }, { threshold: 0.5 });
 
-    // Observar la sección de estadísticas
-    const statsSectionElement = document.querySelector('.bg-dark-gray');
-    if (statsSectionElement) {
-      counterObserver.observe(statsSectionElement);
-    }
+    document.querySelectorAll('.counter').forEach(c => observer.observe(c));
 
-    // Inicializar todos los detalles como cerrados
-    document.querySelectorAll('.details').forEach(detail => {
-      detail.style.maxHeight = '0';
-    });
-  });
-
-  // Función para detalles desplegables
-  function toggleDetails(id) {
-    const element = document.getElementById(id);
-    element.classList.toggle('open');
-    
-    // Animación suave de altura
-    if (element.classList.contains('open')) {
-      element.style.maxHeight = element.scrollHeight + 'px';
-    } else {
-      element.style.maxHeight = '0';
-    }
-  }
-
-  // Función alternativa más robusta para contadores
-  function initCounters() {
-    const counters = document.querySelectorAll('.counter');
-    const options = {
-      threshold: 0.5,
-      rootMargin: '0px 0px -100px 0px'
-    };
-
-    const counterObserver = new IntersectionObserver((entries) => {
+    const observerFade = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const counter = entry.target;
-          const target = parseInt(counter.getAttribute('data-target'));
-          animateCounter(counter, target);
-          counterObserver.unobserve(counter);
+          entry.target.classList.add('visible');
         }
       });
-    }, options);
+    }, { threshold: 0.1 });
 
-    counters.forEach(counter => {
-      counterObserver.observe(counter);
-    });
-  }
-
-  // Ejecutar cuando la página esté completamente cargada
-  window.addEventListener('load', initCounters);
+    document.querySelectorAll('.fade-in, .service-card').forEach(e => observerFade.observe(e));
+  });
 </script>
+
+<style>
+  @keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in-up { animation: fade-in-up 0.8s ease-out forwards; }
+  .delay-200 { animation-delay: 0.2s; }
+  .delay-400 { animation-delay: 0.4s; }
+</style>
 
 <?php include 'footer.php'; ?>

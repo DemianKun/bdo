@@ -3,290 +3,260 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BDO - Soluciones Efectivas</title>
+  <title><?php echo isset($page_title) ? $page_title . " - " : ""; ?>BDO - Soluciones Efectivas</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="icon" href="img/icon.png" type="image/png">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              DEFAULT: '#0f172a', // Fondo principal unificado
+              light: '#1e293b',   // Fondo secundario
+              lighter: '#334155'
+            },
+            accent: {
+              DEFAULT: '#2563eb', // Azul BDO
+              dark: '#1d4ed8'
+            }
+          }
+        }
+      }
+    }
+  </script>
   <style>
     :root {
-      --black: #000000;
-      --dark-gray: #1a1a1a;
-      --gray: #333333;
-      --light-gray: #666666;
-      --white: #ffffff;
-      --accent: #2563eb;
+      --bg-primary: #0f172a;
+      --bg-secondary: #1e293b;
+      --text-main: #ffffff;
+      --text-muted: #94a3b8;
+      --accent-color: #2563eb;
     }
 
-    .bg-black { background-color: var(--black); }
-    .bg-dark-gray { background-color: var(--dark-gray); }
-    .bg-gray { background-color: var(--gray); }
-    .text-white { color: var(--white); }
-    .text-light-gray { color: var(--light-gray); }
-    .text-accent { color: var(--accent); }
-    .border-gray { border-color: var(--gray); }
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+    }
 
-    /* Encabezado Elegante */
+    /* Encabezado Elegante Unificado */
     .header-elegant {
-      background: linear-gradient(135deg, var(--black) 0%, var(--dark-gray) 100%);
-      border-bottom: 1px solid var(--gray);
+      background: rgba(15, 23, 42, 0.95);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.1);
       backdrop-filter: blur(10px);
-    }
-
-    .logo-container {
-      transition: all 0.3s ease;
-      border-radius: 8px;
-      padding: 0.5rem;
-    }
-
-    .logo-container:hover {
-      background: rgba(37, 99, 235, 0.05);
-      transform: translateY(-1px);
     }
 
     .nav-item {
       position: relative;
-      padding: 0.75rem 1.25rem;
+      padding: 0.75rem 1.0rem; /* Ajustado ligeramente para espacio de iconos */
       margin: 0 0.25rem;
       border-radius: 6px;
       transition: all 0.3s ease;
       font-weight: 500;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
     }
 
-    .nav-item::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 0;
-      height: 2px;
-      background: var(--accent);
-      transition: width 0.3s ease;
+    .nav-item:hover, .nav-item.active {
+      background: rgba(37, 99, 235, 0.1);
+      color: var(--accent-color);
     }
 
-    .nav-item:hover::before {
-      width: 70%;
-    }
-
-    .nav-item:hover {
-      background: rgba(37, 99, 235, 0.05);
-    }
-
+    /* Dropdown controlado por JS */
     .dropdown-elegant {
-      background: rgba(26, 26, 26, 0.95);
-      backdrop-filter: blur(20px);
-      border: 1px solid var(--gray);
+      background: #1e293b;
+      border: 1px solid rgba(148, 163, 184, 0.1);
       border-radius: 8px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+      min-width: 240px;
     }
 
     .dropdown-item {
-      transition: all 0.3s ease;
+      transition: all 0.2s ease;
       border-left: 3px solid transparent;
+      color: var(--text-muted);
     }
 
     .dropdown-item:hover {
       background: rgba(37, 99, 235, 0.05);
-      border-left-color: var(--accent);
-      transform: translateX(5px);
+      border-left-color: var(--accent-color);
+      color: #ffffff;
+      padding-left: 1.5rem;
     }
 
     .action-btn {
-      background: rgba(37, 99, 235, 0.1);
-      border: 1px solid rgba(37, 99, 235, 0.3);
+      background: var(--accent-color);
+      color: white;
       border-radius: 6px;
       padding: 0.6rem 1.2rem;
       transition: all 0.3s ease;
       font-weight: 500;
+      box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
     }
 
     .action-btn:hover {
-      background: rgba(37, 99, 235, 0.15);
+      background: #1d4ed8;
       transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(37, 99, 235, 0.1);
+      box-shadow: 0 6px 12px rgba(37, 99, 235, 0.3);
     }
 
-    .mobile-menu-elegant {
-      background: rgba(26, 26, 26, 0.95);
-      backdrop-filter: blur(20px);
-      border: 1px solid var(--gray);
-    }
-
-    /* Footer Elegante */
-    .footer-elegant {
-      background: linear-gradient(135deg, var(--black) 0%, var(--dark-gray) 100%);
-      border-top: 1px solid var(--gray);
-    }
-
-    .footer-link {
-      transition: all 0.3s ease;
-      position: relative;
-    }
-
-    .footer-link::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 1px;
-      bottom: -2px;
-      left: 0;
-      background-color: var(--accent);
-      transition: width 0.3s ease;
-    }
-
-    .footer-link:hover::after {
-      width: 100%;
-    }
-
-    .social-btn {
-      background: var(--gray);
-      transition: all 0.3s ease;
-    }
-
-    .social-btn:hover {
-      background: var(--accent);
-      transform: translateY(-2px);
-    }
+    /* Utilitarios */
+    .text-light-gray { color: var(--text-muted); }
+    .text-accent { color: var(--accent-color); }
+    .bg-dark-gray { background-color: var(--bg-secondary); }
   </style>
 </head>
-<body class="bg-black text-white">
+<body class="font-sans antialiased selection:bg-accent selection:text-white">
 
-<!-- Encabezado Elegante y Formal -->
 <header class="header-elegant sticky top-0 z-50 py-3">
   <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
     
-    <!-- Logo -->
     <div class="flex items-center space-x-3">
-      <a href="index.php" class="logo-container flex items-center space-x-3">
+      <a href="index.php" class="logo-container flex items-center space-x-3 hover:opacity-90 transition-opacity">
         <div class="w-12 h-12">
           <img src="img/logo.png" alt="BDO" class="w-full h-full object-contain">
         </div>
-        <div class="hidden md:block">
-          <div class="text-white font-bold text-lg">BDO</div>
-          <div class="text-accent text-xs">Soluciones Efectivas</div>
+        <div class="hidden md:block leading-tight">
+          <div class="text-white font-bold text-lg tracking-wide">BDO</div>
+          <div class="text-accent text-xs font-medium uppercase tracking-wider">Soluciones Efectivas</div>
         </div>
       </a>
     </div>
 
-    <!-- Navegación Principal -->
-    <nav class="hidden md:flex items-center space-x-1">
+    <nav class="hidden lg:flex items-center space-x-1">
       <a href="index.php" class="nav-item text-white">
-        <i class="fas fa-home mr-2 text-accent"></i>
-        Inicio
+        <i class="fas fa-home mr-2 text-accent"></i> Inicio
       </a>
       
-      <!-- Servicios -->
-      <div class="relative group">
-        <button class="nav-item text-white flex items-center">
-          <i class="fas fa-cogs mr-2 text-accent"></i>
-          Servicios
-          <i class="fas fa-chevron-down ml-2 text-xs"></i>
+      <div class="relative" id="services-container">
+        <button onclick="toggleServicios()" id="btn-servicios" class="nav-item text-white flex items-center focus:outline-none">
+          <i class="fas fa-cogs mr-2 text-accent"></i> Servicios
+          <i id="arrow-servicios" class="fas fa-chevron-down ml-2 text-xs transition-transform duration-300"></i>
         </button>
-        <div class="dropdown-elegant absolute hidden group-hover:block mt-2 py-2 w-56 z-50">
-          <a href="cobranza.php" class="dropdown-item block px-4 py-3 text-light-gray hover:text-white">
-            <i class="fas fa-money-bill-wave mr-3 text-accent"></i>
-            Cobranza
+        
+        <div id="menu-servicios" class="dropdown-elegant absolute hidden mt-2 py-2 right-0 z-50 transform origin-top-right">
+          <a href="cobranza.php" class="dropdown-item block px-4 py-3">
+            <i class="fas fa-money-bill-wave w-6 text-accent"></i> Cobranza
           </a>
-          <a href="ventas.php" class="dropdown-item block px-4 py-3 text-light-gray hover:text-white">
-            <i class="fas fa-chart-line mr-3 text-accent"></i>
-            Ventas
+          <a href="ventas.php" class="dropdown-item block px-4 py-3">
+            <i class="fas fa-chart-line w-6 text-accent"></i> Ventas
           </a>
-          <a href="facturacion.php" class="dropdown-item block px-4 py-3 text-light-gray hover:text-white">
-            <i class="fas fa-file-invoice-dollar mr-3 text-accent"></i>
-            Facturación
+          <a href="facturacion.php" class="dropdown-item block px-4 py-3">
+            <i class="fas fa-file-invoice-dollar w-6 text-accent"></i> Facturación
           </a>
-          <a href="marqueting.php" class="dropdown-item block px-4 py-3 text-light-gray hover:text-white">
-            <i class="fas fa-bullhorn mr-3 text-accent"></i>
-            Marketing
+          <a href="marqueting.php" class="dropdown-item block px-4 py-3">
+            <i class="fas fa-bullhorn w-6 text-accent"></i> Marketing
           </a>
-          <a href="paqueteria.php" class="dropdown-item block px-4 py-3 text-light-gray hover:text-white">
-            <i class="fas fa-shipping-fast mr-3 text-accent"></i>
-            Paquetería
+          <a href="paqueteria.php" class="dropdown-item block px-4 py-3">
+            <i class="fas fa-shipping-fast w-6 text-accent"></i> Paquetería
           </a>
-          <a href="atencion-a-clientes.php" class="dropdown-item block px-4 py-3 text-light-gray hover:text-white">
-            <i class="fas fa-headset mr-3 text-accent"></i>
-            Atención a Clientes
+          <a href="atencion-a-clientes.php" class="dropdown-item block px-4 py-3">
+            <i class="fas fa-headset w-6 text-accent"></i> Atención a Clientes
           </a>
         </div>
       </div>
       
       <a href="cartera-de-clientes.php" class="nav-item text-white">
-        <i class="fas fa-users mr-2 text-accent"></i>
-        Cartera de Clientes
+        <i class="fas fa-users mr-2 text-accent"></i> Cartera de Clientes
       </a>
       
       <a href="herramientas.php" class="nav-item text-white">
-        <i class="fas fa-tools mr-2 text-accent"></i>
-        Herramientas
+        <i class="fas fa-tools mr-2 text-accent"></i> Herramientas
       </a>
     </nav>
 
-    <!-- Acciones -->
     <div class="hidden md:flex items-center space-x-3">
-      <a href="https://wa.me/525637713882" class="action-btn text-white text-sm">
-        <i class="fab fa-whatsapp mr-2"></i>
-        Contactar
+      <a href="https://wa.me/525637713882" class="action-btn text-sm flex items-center gap-2">
+        <i class="fab fa-whatsapp text-lg"></i>
+        <span>Contactar</span>
       </a>
     </div>
 
-    <!-- Menú Mobile -->
-    <button id="menu-toggle" class="md:hidden text-white p-2 rounded-lg bg-gray border border-gray">
-      <i class="fas fa-bars"></i>
+    <button onclick="toggleMobileMenu()" class="lg:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors">
+      <i class="fas fa-bars text-xl"></i>
     </button>
   </div>
 
-  <!-- Menú Móvil -->
-  <div id="mobile-menu" class="mobile-menu-elegant md:hidden hidden mt-3 mx-4 rounded-lg">
-    <div class="p-4 space-y-2">
-      <a href="index.html" class="flex items-center px-4 py-3 text-white bg-dark-gray rounded-lg">
-        <i class="fas fa-home mr-3 text-accent"></i>
-        Inicio
+  <div id="mobile-menu" class="hidden lg:hidden bg-navy-light border-t border-white/10 absolute w-full left-0 top-full shadow-xl z-40">
+    <div class="p-4 space-y-2 max-h-[80vh] overflow-y-auto">
+      <a href="index.php" class="block px-4 py-3 text-white bg-white/5 rounded-lg flex items-center">
+        <i class="fas fa-home mr-3 text-accent"></i> Inicio
       </a>
       
-      <div class="px-4 py-2 text-light-gray font-semibold">Servicios</div>
-      <div class="pl-6 space-y-1">
-        <a href="cobranza.php" class="flex items-center px-4 py-2 text-light-gray hover:text-white">
-          <i class="fas fa-money-bill-wave mr-3 text-accent text-sm"></i>
-          Cobranza
-        </a>
-        <a href="ventas.php" class="flex items-center px-4 py-2 text-light-gray hover:text-white">
-          <i class="fas fa-chart-line mr-3 text-accent text-sm"></i>
-          Ventas
-        </a>
-        <a href="facturacion.php" class="flex items-center px-4 py-2 text-light-gray hover:text-white">
-          <i class="fas fa-file-invoice-dollar mr-3 text-accent text-sm"></i>
-          Facturación
-        </a>
-        <a href="marqueting.php" class="flex items-center px-4 py-2 text-light-gray hover:text-white">
-          <i class="fas fa-bullhorn mr-3 text-accent text-sm"></i>
-          Marketing
-        </a>
-        <a href="paqueteria.php" class="flex items-center px-4 py-2 text-light-gray hover:text-white">
-          <i class="fas fa-shipping-fast mr-3 text-accent text-sm"></i>
-          Paquetería
-        </a>
-        <a href="atencion-a-clientes.php" class="flex items-center px-4 py-2 text-light-gray hover:text-white">
-          <i class="fas fa-headset mr-3 text-accent text-sm"></i>
-          Atención a Clientes
-        </a>
+      <div class="px-4 py-2 text-gray-400 font-semibold text-sm uppercase tracking-wider mt-4 flex items-center">
+        <i class="fas fa-cogs mr-2 text-accent"></i> Servicios BDO
+      </div>
+      <div class="space-y-1 pl-4 border-l-2 border-white/5 ml-4">
+        <a href="cobranza.php" class="block px-4 py-2 text-gray-300 hover:text-white hover:bg-white/5 rounded">Cobranza</a>
+        <a href="ventas.php" class="block px-4 py-2 text-gray-300 hover:text-white hover:bg-white/5 rounded">Ventas</a>
+        <a href="facturacion.php" class="block px-4 py-2 text-gray-300 hover:text-white hover:bg-white/5 rounded">Facturación</a>
+        <a href="marqueting.php" class="block px-4 py-2 text-gray-300 hover:text-white hover:bg-white/5 rounded">Marketing</a>
+        <a href="paqueteria.php" class="block px-4 py-2 text-gray-300 hover:text-white hover:bg-white/5 rounded">Paquetería</a>
+        <a href="atencion-a-clientes.php" class="block px-4 py-2 text-gray-300 hover:text-white hover:bg-white/5 rounded">Atención a Clientes</a>
       </div>
       
-      <a href="cartera-de-clientes.php" class="flex items-center px-4 py-3 text-light-gray hover:text-white">
-        <i class="fas fa-users mr-3 text-accent"></i>
-        Cartera de Clientes
+      <div class="border-t border-white/10 my-2"></div>
+      
+      <a href="cartera-de-clientes.php" class="block px-4 py-3 text-gray-300 hover:text-white flex items-center">
+        <i class="fas fa-users mr-3 text-accent"></i> Cartera de Clientes
       </a>
       
-      <a href="herramientas.php" class="flex items-center px-4 py-3 text-light-gray hover:text-white">
-        <i class="fas fa-tools mr-3 text-accent"></i>
-        Herramientas
+      <a href="herramientas.php" class="block px-4 py-3 text-gray-300 hover:text-white flex items-center">
+        <i class="fas fa-tools mr-3 text-accent"></i> Herramientas
       </a>
 
-      <div class="pt-4 border-t border-gray">
-        <a href="https://wa.me/525637713882" class="flex items-center justify-center px-4 py-3 bg-accent text-white rounded-lg">
-          <i class="fab fa-whatsapp mr-2"></i>
-          Contactar por WhatsApp
+      <div class="pt-4 mt-4 border-t border-white/10">
+        <a href="https://wa.me/525637713882" class="flex items-center justify-center px-4 py-3 bg-accent text-white rounded-lg font-bold">
+          <i class="fab fa-whatsapp mr-2"></i> Contactar por WhatsApp
         </a>
       </div>
     </div>
   </div>
 </header>
+
+<script>
+  // Lógica para el Menú Desplegable con Click (Desktop)
+  function toggleServicios() {
+    const menu = document.getElementById('menu-servicios');
+    const arrow = document.getElementById('arrow-servicios');
+    const btn = document.getElementById('btn-servicios');
+    
+    // Alternar visibilidad
+    menu.classList.toggle('hidden');
+    
+    // Rotar flecha y activar estado visual del botón
+    if (menu.classList.contains('hidden')) {
+      arrow.style.transform = 'rotate(0deg)';
+      btn.classList.remove('text-accent'); 
+      // Si quieres mantener el fondo activo también, podrías quitar una clase bg aquí
+    } else {
+      arrow.style.transform = 'rotate(180deg)';
+      btn.classList.add('text-accent');
+    }
+  }
+
+  // Lógica para Menú Móvil
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+  }
+
+  // Cerrar menús al hacer clic fuera
+  document.addEventListener('click', function(event) {
+    const container = document.getElementById('services-container');
+    const menu = document.getElementById('menu-servicios');
+    const arrow = document.getElementById('arrow-servicios');
+    const btn = document.getElementById('btn-servicios');
+    
+    // Si el clic NO fue dentro del contenedor del menú
+    if (container && !container.contains(event.target)) {
+      if (!menu.classList.contains('hidden')) {
+        menu.classList.add('hidden');
+        arrow.style.transform = 'rotate(0deg)';
+        btn.classList.remove('text-accent');
+      }
+    }
+  });
+</script>
