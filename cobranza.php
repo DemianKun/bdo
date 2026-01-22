@@ -132,7 +132,7 @@ include 'header.php';
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
       <div class="bg-navy rounded-xl p-8 shadow-2xl border border-white/10 transform hover:-translate-y-1 transition-transform duration-300">
-        <h3 class="text-2xl font-bold mb-6 text-white border-b border-white/10 pb-4">Información de Contacto</h3>
+        <h3 class="text-xl font-bold mb-6 text-white border-b border-white/10 pb-4">Información de Contacto</h3>
         <div class="space-y-6">
           <div class="flex items-center text-gray-200 group">
             <div class="w-12 h-12 rounded-lg bg-navy-light flex items-center justify-center mr-4 text-accent group-hover:text-white group-hover:bg-accent transition-colors">
@@ -145,6 +145,12 @@ include 'header.php';
                <i class="fas fa-phone-alt text-xl"></i>
             </div>
             <span class="text-lg">+52 5637713882</span>
+          </div>
+          <div class="flex items-center text-gray-200 group">
+            <div class="w-12 h-12 rounded-lg bg-navy-light flex items-center justify-center mr-4 text-accent group-hover:text-white group-hover:bg-accent transition-colors">
+               <i class="fas fa-map-marker-alt text-xl"></i>
+            </div>
+            <span class="text-lg">Ixtapaluca, Estado de México</span>
           </div>
         </div>
       </div>

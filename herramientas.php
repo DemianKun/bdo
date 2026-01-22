@@ -264,15 +264,15 @@ include 'header.php';
       </div>
 
       <div class="bg-navy rounded-xl p-8 shadow-2xl border border-white/10 transform hover:-translate-y-1 transition-transform duration-300">
-        <h3 class="text-xl font-bold mb-6 text-white border-b border-white/10 pb-4">Agendar Demo</h3>
+        <h3 class="text-2xl font-bold mb-6 text-white border-b border-white/10 pb-4">Solicitar Asesoría</h3>
         <div class="space-y-4">
-          <a href="https://wa.me/525637713882?text=Hola,%20interesado%20en%20herramientas%20digitales" 
-             class="block w-full bg-white text-navy hover:bg-gray-100 py-3 rounded-lg font-bold text-center transition-all shadow-md">
-            <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+          <a href="https://wa.me/525637713882?text=Hola,%20estoy%20interesado%20en%20el%20servicio%20de%20cobranza" 
+             class="block w-full bg-white text-navy hover:bg-gray-100 py-4 rounded-lg font-bold text-center transition-all shadow-md flex items-center justify-center">
+            <i class="fab fa-whatsapp mr-2 text-2xl text-green-600"></i> Contactar por WhatsApp
           </a>
           <a href="tel:+525637713882" 
-             class="block w-full bg-navy-light hover:bg-accent text-white py-3 rounded-lg font-bold text-center transition-all shadow-md border border-white/10">
-            <i class="fas fa-phone mr-2"></i> Llamar
+             class="block w-full bg-navy-light hover:bg-accent text-white py-4 rounded-lg font-bold text-center transition-all shadow-md border border-white/10 flex items-center justify-center">
+            <i class="fas fa-phone mr-2"></i> Llamar Ahora
           </a>
         </div>
       </div>

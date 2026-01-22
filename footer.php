@@ -44,6 +44,11 @@
             </a>
           </li>
           <li>
+            <a href="preguntas-frecuentes.php" class="text-gray-400 hover:text-white hover:translate-x-2 transition-all duration-300 flex items-center">
+              <i class="fas fa-chevron-right text-accent text-xs mr-2"></i> Preguntas Frecuentes
+            </a>
+          </li>
+          <li>
             <a href="#" class="text-gray-400 hover:text-white hover:translate-x-2 transition-all duration-300 flex items-center">
               <i class="fas fa-chevron-right text-accent text-xs mr-2"></i> Aviso de Privacidad
             </a>

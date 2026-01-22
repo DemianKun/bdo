@@ -187,13 +187,13 @@ include 'header.php';
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
       <div class="bg-navy rounded-xl p-8 shadow-2xl border border-white/10 transform hover:-translate-y-1 transition-transform duration-300">
-        <h3 class="text-xl font-bold mb-6 text-white border-b border-white/10 pb-4">Contacto de Ventas</h3>
+        <h3 class="text-xl font-bold mb-6 text-white border-b border-white/10 pb-4">Información de Contacto</h3>
         <div class="space-y-6">
           <div class="flex items-center text-gray-200 group">
             <div class="w-12 h-12 rounded-lg bg-navy-light flex items-center justify-center mr-4 text-accent group-hover:text-white group-hover:bg-accent transition-colors">
                <i class="fas fa-envelope text-xl"></i>
             </div>
-            <span class="text-lg">ventas@bdosoluciones.com</span>
+            <span class="text-lg">admin@bdosoluciones.com</span>
           </div>
           <div class="flex items-center text-gray-200 group">
             <div class="w-12 h-12 rounded-lg bg-navy-light flex items-center justify-center mr-4 text-accent group-hover:text-white group-hover:bg-accent transition-colors">
@@ -201,17 +201,22 @@ include 'header.php';
             </div>
             <span class="text-lg">+52 5637713882</span>
           </div>
+          <div class="flex items-center text-gray-200 group">
+            <div class="w-12 h-12 rounded-lg bg-navy-light flex items-center justify-center mr-4 text-accent group-hover:text-white group-hover:bg-accent transition-colors">
+               <i class="fas fa-map-marker-alt text-xl"></i>
+            </div>
+            <span class="text-lg">Ixtapaluca, Estado de México</span>
+          </div>
         </div>
       </div>
 
       <div class="bg-navy rounded-xl p-8 shadow-2xl border border-white/10 transform hover:-translate-y-1 transition-transform duration-300">
-        <h3 class="text-xl font-bold mb-6 text-white border-b border-white/10 pb-4">Pedir Cotización</h3>
+        <h3 class="text-2xl font-bold mb-6 text-white border-b border-white/10 pb-4">Solicitar Asesoría</h3>
         <div class="space-y-4">
-          <a href="https://wa.me/525637713882?text=Hola,%20necesito%20info%20de%20facturación" 
+          <a href="https://wa.me/525637713882?text=Hola,%20estoy%20interesado%20en%20el%20servicio%20de%20cobranza" 
              class="block w-full bg-white text-navy hover:bg-gray-100 py-4 rounded-lg font-bold text-center transition-all shadow-md flex items-center justify-center">
-            <i class="fab fa-whatsapp mr-2 text-2xl text-green-600"></i> WhatsApp
+            <i class="fab fa-whatsapp mr-2 text-2xl text-green-600"></i> Contactar por WhatsApp
           </a>
-          
           <a href="tel:+525637713882" 
              class="block w-full bg-navy-light hover:bg-accent text-white py-4 rounded-lg font-bold text-center transition-all shadow-md border border-white/10 flex items-center justify-center">
             <i class="fas fa-phone mr-2"></i> Llamar Ahora
